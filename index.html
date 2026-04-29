@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zen Therapy — Relaxation Massage | Harish</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cinzel:wght@400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #c8a96e;
+    --gold-light: #e8d5a3;
+    --gold-dark: #9a7a45;
+    --dark: #0e0b08;
+    --dark-2: #1a1510;
+    --dark-3: #241d14;
+    --dark-4: #2e2518;
+    --warm: #3d2f1e;
+    --text: #d4c4a8;
+    --text-light: #f0e8d8;
+    --text-muted: #8a7a65;
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+background: var(–dark);
+color: var(–text);
+font-family: ‘Lato’, sans-serif;
+font-weight: 300;
+line-height: 1.8;
+overflow-x: hidden;
+}
+
+/* ── LANGUAGE SWITCHER ── */
+.lang-bar {
+position: fixed;
+top: 0; right: 0; left: 0;
+z-index: 1000;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding: 10px 40px;
+background: rgba(14,11,8,0.95);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(200,169,110,0.15);
+}
+
+.lang-bar .brand-nav {
+margin-right: auto;
+font-family: ‘Cinzel’, serif;
+font-size: 1rem;
+letter-spacing: 0.2em;
+color: var(–gold);
+}
+
+.lang-btns { display: flex; gap: 8px; }
+
+.lang-btn {
+background: transparent;
+border: 1px solid rgba(200,169,110,0.3);
+color: var(–text-muted);
+padding: 4px 14px;
+font-family: ‘Lato’, sans-serif;
+font-size: 0.7rem;
+letter-spacing: 0.15em;
+cursor: pointer;
+transition: all 0.3s;
+text-transform: uppercase;
+}
+
+.lang-btn:hover, .lang-btn.active {
+background: var(–gold);
+border-color: var(–gold);
+color: var(–dark);
+}
+
+/* ── HERO ── */
+.hero {
+position: relative;
+height: 100vh;
+min-height: 700px;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+}
+
+.hero-img {
+position: absolute;
+inset: 0;
+width: 100%; height: 100%;
+object-fit: cover;
+object-position: center top;
+filter: brightness(0.45) saturate(0.8);
+}
+
+.hero-overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(
+to bottom,
+rgba(14,11,8,0.3) 0%,
+rgba(14,11,8,0.1) 40%,
+rgba(14,11,8,0.6) 80%,
+rgba(14,11,8,1) 100%
+);
+}
+
+.hero-content {
+position: relative;
+text-align: center;
+padding: 0 20px;
+animation: fadeUp 1.4s ease both;
+}
+
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(30px); }
+to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-eyebrow {
+font-family: ‘Lato’, sans-serif;
+font-size: 0.7rem;
+letter-spacing: 0.45em;
+color: var(–gold);
+text-transform: uppercase;
+margin-bottom: 20px;
+}
+
+.hero-title {
+font-family: ‘Cinzel’, serif;
+font-size: clamp(3rem, 8vw, 7rem);
+font-weight: 400;
+letter-spacing: 0.12em;
+color: var(–text-light);
+line-height: 1;
+margin-bottom: 24px;
+}
+
+.hero-tagline {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+color: var(–gold-light);
+font-weight: 300;
+margin-bottom: 50px;
+max-width: 600px;
+margin-left: auto;
+margin-right: auto;
+line-height: 1.5;
+}
+
+.btn-book {
+display: inline-block;
+background: transparent;
+border: 1px solid var(–gold);
+color: var(–gold);
+font-family: ‘Cinzel’, serif;
+font-size: 0.8rem;
+letter-spacing: 0.35em;
+text-transform: uppercase;
+text-decoration: none;
+padding: 18px 52px;
+position: relative;
+overflow: hidden;
+cursor: pointer;
+transition: color 0.4s;
+}
+
+.btn-book::before {
+content: ‘’;
+position: absolute;
+inset: 0;
+background: var(–gold);
+transform: scaleX(0);
+transform-origin: left;
+transition: transform 0.4s ease;
+}
+
+.btn-book:hover::before { transform: scaleX(1); }
+.btn-book:hover { color: var(–dark); }
+
+.btn-book span { position: relative; z-index: 1; }
+
+/* ── SECTION COMMONS ── */
+section { padding: 100px 40px; }
+
+.section-eyebrow {
+font-size: 0.65rem;
+letter-spacing: 0.45em;
+color: var(–gold);
+text-transform: uppercase;
+text-align: center;
+margin-bottom: 12px;
+}
+
+.section-title {
+font-family: ‘Cinzel’, serif;
+font-size: clamp(1.8rem, 4vw, 2.8rem);
+font-weight: 400;
+letter-spacing: 0.08em;
+color: var(–text-light);
+text-align: center;
+margin-bottom: 16px;
+}
+
+.section-divider {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 16px;
+margin-bottom: 60px;
+}
+
+.section-divider::before,
+.section-divider::after {
+content: ‘’;
+width: 80px;
+height: 1px;
+background: linear-gradient(to right, transparent, var(–gold-dark));
+}
+
+.section-divider::after {
+background: linear-gradient(to left, transparent, var(–gold-dark));
+}
+
+.divider-diamond {
+width: 6px; height: 6px;
+background: var(–gold);
+transform: rotate(45deg);
+}
+
+/* ── ABOUT / THERAPIST ── */
+.about-section {
+background: var(–dark-2);
+text-align: center;
+}
+
+.about-text {
+max-width: 680px;
+margin: 0 auto 50px;
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.2rem;
+line-height: 1.9;
+color: var(–text);
+}
+
+.therapist-card {
+display: inline-flex;
+flex-direction: column;
+align-items: center;
+gap: 8px;
+border: 1px solid rgba(200,169,110,0.2);
+padding: 30px 50px;
+background: rgba(255,255,255,0.02);
+}
+
+.therapist-name {
+font-family: ‘Cinzel’, serif;
+font-size: 1.4rem;
+letter-spacing: 0.2em;
+color: var(–gold);
+}
+
+.therapist-detail {
+font-size: 0.78rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(–text-muted);
+}
+
+.therapist-insta a {
+color: var(–gold-light);
+text-decoration: none;
+font-size: 0.82rem;
+letter-spacing: 0.1em;
+transition: color 0.3s;
+}
+
+.therapist-insta a:hover { color: var(–gold); }
+
+/* ── SECTION IMAGE BANNER ── */
+.section-image-banner {
+width: 100%;
+height: 420px;
+overflow: hidden;
+position: relative;
+}
+
+.section-image-banner img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+filter: brightness(0.75) saturate(0.85);
+display: block;
+}
+
+/* ── SERVICES ── */
+.services-section { background: var(–dark); }
+
+.services-grid {
+max-width: 900px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 2px;
+}
+
+.service-category {
+margin-bottom: 40px;
+}
+
+.service-category-title {
+font-family: ‘Cinzel’, serif;
+font-size: 0.75rem;
+letter-spacing: 0.4em;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 20px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(200,169,110,0.2);
+}
+
+.service-item {
+border: 1px solid rgba(200,169,110,0.1);
+background: rgba(255,255,255,0.015);
+margin-bottom: 2px;
+transition: background 0.3s;
+}
+
+.service-item:hover { background: rgba(200,169,110,0.04); }
+
+.service-header {
+display: flex;
+align-items: center;
+padding: 22px 28px;
+cursor: pointer;
+gap: 20px;
+user-select: none;
+}
+
+.service-name {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.15rem;
+font-weight: 500;
+color: var(–text-light);
+flex: 1;
+}
+
+.service-meta {
+display: flex;
+align-items: center;
+gap: 20px;
+font-size: 0.78rem;
+letter-spacing: 0.1em;
+color: var(–text-muted);
+white-space: nowrap;
+}
+
+.service-price {
+color: var(–gold);
+font-family: ‘Cinzel’, serif;
+font-size: 0.9rem;
+}
+
+.service-chevron {
+width: 16px; height: 16px;
+border-right: 1px solid var(–gold);
+border-bottom: 1px solid var(–gold);
+transform: rotate(45deg);
+transition: transform 0.35s ease;
+flex-shrink: 0;
+}
+
+.service-item.open .service-chevron {
+transform: rotate(-135deg);
+}
+
+.service-body {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.55s cubic-bezier(0.4,0,0.2,1);
+}
+
+.service-item.open .service-body { max-height: 800px; }
+
+.service-desc {
+padding: 0 28px 28px;
+border-top: 1px solid rgba(200,169,110,0.08);
+padding-top: 20px;
+}
+
+.service-desc p {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.05rem;
+line-height: 1.9;
+color: var(–text);
+margin-bottom: 12px;
+}
+
+.service-desc p:last-child { margin-bottom: 0; }
+
+.service-benefits {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+margin-top: 16px;
+margin-bottom: 24px;
+}
+
+.benefit-tag {
+font-size: 0.68rem;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: var(–gold-dark);
+border: 1px solid rgba(154,122,69,0.35);
+padding: 4px 12px;
+}
+
+/* ── BOOK NOW (inside services) ── */
+.btn-book-service {
+display: inline-block;
+background: transparent;
+border: 1px solid var(–gold);
+color: var(–gold);
+font-family: ‘Cinzel’, serif;
+font-size: 0.72rem;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+text-decoration: none;
+padding: 13px 36px;
+position: relative;
+overflow: hidden;
+cursor: pointer;
+transition: color 0.4s;
+margin-top: 8px;
+}
+
+.btn-book-service::before {
+content: ‘’;
+position: absolute;
+inset: 0;
+background: var(–gold);
+transform: scaleX(0);
+transform-origin: left;
+transition: transform 0.4s ease;
+}
+
+.btn-book-service:hover::before { transform: scaleX(1); }
+.btn-book-service:hover { color: var(–dark); }
+.btn-book-service span { position: relative; z-index: 1; }
+
+/* ── REVIEWS ── */
+.reviews-section { background: var(–dark-2); }
+
+.reviews-grid {
+max-width: 1000px;
+margin: 0 auto 80px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 24px;
+}
+
+.review-card {
+background: rgba(255,255,255,0.025);
+border: 1px solid rgba(200,169,110,0.15);
+padding: 36px 30px;
+position: relative;
+}
+
+.review-card::before {
+content: ‘”’;
+position: absolute;
+top: 10px; left: 22px;
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 5rem;
+color: rgba(200,169,110,0.12);
+line-height: 1;
+}
+
+.stars {
+display: flex;
+gap: 3px;
+margin-bottom: 16px;
+}
+
+.star {
+color: var(–gold);
+font-size: 0.9rem;
+}
+
+.review-text {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 1.05rem;
+line-height: 1.8;
+color: var(–text);
+margin-bottom: 20px;
+}
+
+.reviewer-name {
+font-size: 0.72rem;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(–gold-dark);
+}
+
+/* ── LEAVE A REVIEW ── */
+.review-form-wrap {
+max-width: 600px;
+margin: 0 auto;
+background: rgba(255,255,255,0.02);
+border: 1px solid rgba(200,169,110,0.18);
+padding: 50px 40px;
+}
+
+.form-title {
+font-family: ‘Cinzel’, serif;
+font-size: 1rem;
+letter-spacing: 0.2em;
+color: var(–gold);
+text-align: center;
+margin-bottom: 36px;
+}
+
+.star-rating {
+display: flex;
+justify-content: center;
+gap: 8px;
+margin-bottom: 28px;
+font-size: 1.8rem;
+cursor: pointer;
+flex-direction: row-reverse;
+}
+
+.star-rating input { display: none; }
+
+.star-rating label {
+color: rgba(200,169,110,0.25);
+cursor: pointer;
+transition: color 0.2s;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+color: var(–gold);
+}
+
+.form-field {
+margin-bottom: 20px;
+}
+
+.form-field input,
+.form-field textarea {
+width: 100%;
+background: rgba(255,255,255,0.03);
+border: 1px solid rgba(200,169,110,0.2);
+color: var(–text-light);
+padding: 14px 18px;
+font-family: ‘Lato’, sans-serif;
+font-weight: 300;
+font-size: 0.9rem;
+outline: none;
+transition: border-color 0.3s;
+resize: none;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: var(–text-muted); }
+
+.form-field input:focus,
+.form-field textarea:focus { border-color: var(–gold); }
+
+.btn-submit {
+width: 100%;
+background: transparent;
+border: 1px solid var(–gold);
+color: var(–gold);
+font-family: ‘Cinzel’, serif;
+font-size: 0.75rem;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+padding: 16px;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+transition: color 0.4s;
+}
+
+.btn-submit::before {
+content: ‘’;
+position: absolute;
+inset: 0;
+background: var(–gold);
+transform: scaleX(0);
+transform-origin: left;
+transition: transform 0.4s ease;
+}
+
+.btn-submit:hover::before { transform: scaleX(1); }
+.btn-submit:hover { color: var(–dark); }
+.btn-submit span { position: relative; z-index: 1; }
+
+.form-success {
+display: none;
+text-align: center;
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+color: var(–gold-light);
+font-size: 1.1rem;
+padding: 20px;
+}
+
+/* ── FOOTER ── */
+footer {
+background: var(–dark-2);
+border-top: 1px solid rgba(200,169,110,0.12);
+padding: 50px 40px;
+text-align: center;
+}
+
+.footer-brand {
+font-family: ‘Cinzel’, serif;
+font-size: 1.4rem;
+letter-spacing: 0.25em;
+color: var(–gold);
+margin-bottom: 10px;
+}
+
+.footer-details {
+font-size: 0.75rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(–text-muted);
+line-height: 2;
+}
+
+.footer-details a {
+color: var(–gold-dark);
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.footer-details a:hover { color: var(–gold); }
+
+.footer-copy {
+margin-top: 30px;
+font-size: 0.65rem;
+letter-spacing: 0.15em;
+color: rgba(138,122,101,0.5);
+}
+
+/* ── RTL ── */
+body.lang-he {
+direction: rtl;
+font-family: ‘Lato’, ‘Arial Hebrew’, sans-serif;
+}
+
+body.lang-he .service-meta { flex-direction: row-reverse; }
+body.lang-he .service-divider::before { background: linear-gradient(to left, transparent, var(–gold-dark)); }
+body.lang-he .service-divider::after { background: linear-gradient(to right, transparent, var(–gold-dark)); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+section { padding: 70px 20px; }
+.lang-bar { padding: 10px 20px; }
+.review-form-wrap { padding: 36px 22px; }
+.service-header { padding: 18px 18px; }
+.service-meta { flex-direction: column; gap: 4px; align-items: flex-end; }
+.service-desc { padding: 0 18px 22px; padding-top: 16px; }
+.section-image-banner { height: 260px; }
+}
+</style>
+
+</head>
+<body class="lang-en">
+
+<!-- ── LANGUAGE BAR ── -->
+
+<nav class="lang-bar">
+  <div class="brand-nav">ZEN THERAPY</div>
+  <div class="lang-btns">
+    <button class="lang-btn active" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn" onclick="setLang('he')">עב</button>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+
+<section class="hero">
+  <img class="hero-img"
+       src="massage-hero.jpg.PNG"
+       alt="Zen Therapy relaxation massage">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-en="Relaxation Massage · Harish" data-fr="Massage Bien Être · Harish" data-he="עיסוי מרגיע · חריש">Relaxation Massage · Harish</p>
+    <h1 class="hero-title">ZEN THERAPY</h1>
+    <p class="hero-tagline"
+       data-en="Where silence meets touch, and the body remembers what it means to rest."
+       data-fr="Là où le silence rencontre le toucher, et le corps retrouve le repos."
+       data-he="שם שבו השקט פוגש את המגע, והגוף נזכר במה שפירושו לנוח.">
+      Where silence meets touch, and the body remembers what it means to rest.
+    </p>
+    <a href="https://wa.me/972586874252?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20chez%20Zen%20Therapy%20%F0%9F%8C%BF" target="_blank" class="btn-book">
+      <span data-en="BOOK NOW" data-fr="RÉSERVER" data-he="הזמן עכשיו">BOOK NOW</span>
+    </a>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+
+<section class="about-section">
+  <p class="section-eyebrow" data-en="Your Therapist" data-fr="Votre Thérapeute" data-he="המטפלת שלך">Your Therapist</p>
+  <h2 class="section-title" data-en="An Oasis of Calm" data-fr="Une Oasis de Calme" data-he="אוֹאָזִיס של שלווה">An Oasis of Calm</h2>
+  <div class="section-divider"><div class="divider-diamond"></div></div>
+  <p class="about-text"
+     data-en="At Zen Therapy, every session is a journey inward. Drawing on the art of Swedish and Californian massage, combined with ancestral techniques from across the world, each treatment is tailored to your body's unique needs. In the heart of Harish, our studio is a sanctuary — a place to breathe, release, and rediscover harmony."
+     data-fr="Chez Zen Therapy, chaque séance est un voyage vers l'intérieur. Puisant dans l'art du massage suédois et californien, combiné à des techniques ancestrales du monde entier, chaque soin est adapté aux besoins uniques de votre corps. Au cœur de Harish, notre espace est un sanctuaire — un lieu pour respirer, se libérer et retrouver l'harmonie."
+     data-he="בזן תרפי, כל טיפול הוא מסע פנימה. בהשראת אמנות העיסוי השוודי והקליפורני, בשילוב טכניקות עתיקות מרחבי העולם, כל טיפול מותאם לצרכים הייחודיים של גופך. בלב חריש, הסטודיו שלנו הוא מקלט — מקום לנשום, לשחרר, ולמצוא מחדש את ההרמוניה.">
+    At Zen Therapy, every session is a journey inward. Drawing on the art of Swedish and Californian massage, combined with ancestral techniques from across the world, each treatment is tailored to your body's unique needs. In the heart of Harish, our studio is a sanctuary — a place to breathe, release, and rediscover harmony.
+  </p>
+  <div class="therapist-card">
+    <div class="therapist-name">LIORA</div>
+    <div class="therapist-detail" data-en="Certified Massage Therapist" data-fr="Masseuse Certifiée" data-he="מטפלת עיסוי מוסמכת">Certified Massage Therapist</div>
+    <div class="therapist-detail" data-en="Harish, Israel" data-fr="Harish, Israël" data-he="חריש, ישראל">Harish, Israel</div>
+    <div class="therapist-insta">
+      <a href="https://instagram.com/zen_therapy_liora" target="_blank">@zen_therapy_liora</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── IMAGE BANNER before Services ── -->
+
+<div class="section-image-banner">
+  <img src="massage-pierre.jpg" alt="Hot stone massage at Zen Therapy">
+</div>
+
+<!-- ── SERVICES ── -->
+
+<section class="services-section" id="services">
+  <p class="section-eyebrow" data-en="Our Treatments" data-fr="Nos Soins" data-he="הטיפולים שלנו">Our Treatments</p>
+  <h2 class="section-title" data-en="The Art of Touch" data-fr="L'Art du Toucher" data-he="אמנות המגע">The Art of Touch</h2>
+  <div class="section-divider"><div class="divider-diamond"></div></div>
+
+  <div class="services-grid">
+
+```
+<!-- CLASSIC MASSAGES -->
+<div class="service-category">
+  <div class="service-category-title"
+       data-en="✦ Classic Massages" data-fr="✦ Massages Classiques" data-he="✦ עיסויים קלאסיים">
+    ✦ Classic Massages
+  </div>
+
+  <!-- SEMI MASSAGE -->
+  <div class="service-item" onclick="toggleService(this)">
+    <div class="service-header">
+      <div class="service-name" data-en="Semi Massage" data-fr="Demi-Massage" data-he="עיסוי חלקי">Semi Massage</div>
+      <div class="service-meta">
+        <span data-en="30 min" data-fr="30 min" data-he="30 דקות">30 min</span>
+        <span class="service-price">100 ₪</span>
+      </div>
+      <div class="service-chevron"></div>
+    </div>
+    <div class="service-body">
+      <div class="service-desc">
+        <p data-en="The Semi Massage is a focused, deeply restorative treatment during which you choose two areas of the body that need the most care — whether it's the back and shoulders, the legs and feet, or any other combination. Liora will dedicate her full expertise to those zones, applying both Californian and Swedish techniques to melt away tension and restore circulation."
+           data-fr="Le Demi-Massage est un soin ciblé et profondément régénérateur au cours duquel vous choisissez deux zones du corps qui nécessitent le plus d'attention — que ce soit le dos et les épaules, les jambes et les pieds, ou toute autre combinaison. Liora consacrera toute son expertise à ces zones, en appliquant des techniques californiennes et suédoises pour faire fondre les tensions et restaurer la circulation."
+           data-he="עיסוי חלקי הוא טיפול ממוקד ומשקם עמוק בו אתם בוחרים שני אזורים בגוף הזקוקים לטיפול מיוחד — בין אם זה הגב והכתפיים, הרגליים והרגלים, או כל שילוב אחר. ליאורה תקדיש את מלוא המומחיות שלה לאזורים אלו, תוך שימוש בטכניקות קליפורניות ושוודיות להמסת מתחים ושיקום זרימת הדם.">
+          The Semi Massage is a focused, deeply restorative treatment during which you choose two areas of the body that need the most care — whether it's the back and shoulders, the legs and feet, or any other combination. Liora will dedicate her full expertise to those zones, applying both Californian and Swedish techniques to melt away tension and restore circulation.
+        </p>
+        <p data-en="The Californian technique uses long, fluid, enveloping strokes that connect body, mind, and spirit, creating a sensation of deep security and warmth. The Swedish method incorporates kneading, rhythmic tapping, and precise effleurage to release tight muscles and stimulate lymphatic drainage."
+           data-fr="La technique californienne utilise de longs mouvements fluides et enveloppants qui connectent le corps, l'esprit et l'âme, créant une sensation de profonde sécurité et de chaleur. La méthode suédoise intègre des pétrissages, des tapotements rythmiques et des effleurages précis pour libérer les muscles contractés et stimuler le drainage lymphatique."
+           data-he="הטכניקה הקליפורנית משתמשת בתנועות ארוכות, זורמות ועוטפות המחברות גוף, נפש ורוח, ויוצרת תחושה של ביטחון ועצמה עמוקה. השיטה השוודית משלבת לישה, הקשות קצביות ואפלורז'ים מדויקים לשחרור שרירים תפוסים ולגירוי ניקוז לימפתי.">
+          The Californian technique uses long, fluid, enveloping strokes that connect body, mind, and spirit, creating a sensation of deep security and warmth. The Swedish method incorporates kneading, rhythmic tapping, and precise effleurage to release tight muscles and stimulate lymphatic drainage.
+        </p>
+        <div class="service-benefits">
+          <span class="benefit-tag" data-en="Muscle relief" data-fr="Soulagement musculaire" data-he="הקלת שרירים">Muscle relief</span>
+          <span class="benefit-tag" data-en="Targeted care" data-fr="Soin ciblé" data-he="טיפול ממוקד">Targeted care</span>
+          <span class="benefit-tag" data-en="Stress relief" data-fr="Anti-stress" data-he="הפגת לחץ">Stress relief</span>
+          <span class="benefit-tag" data-en="Circulation boost" data-fr="Circulation" data-he="שיפור מחזור הדם">Circulation boost</span>
+        </div>
+        <a href="https://wa.me/972586874252?text=Bonjour%20Liora%20%F0%9F%8C%BF%20Je%20souhaite%20r%C3%A9server%20un%20Demi-Massage%20(30%20min%20%E2%80%93%20100%E2%82%AA).%20Quelles%20sont%20vos%20disponibilit%C3%A9s%20%3F" target="_blank" class="btn-book-service" onclick="event.stopPropagation()">
+          <span data-en="BOOK NOW" data-fr="RÉSERVER" data-he="הזמן עכשיו">BOOK NOW</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL BODY MASSAGE -->
+  <div class="service-item" onclick="toggleService(this)">
+    <div class="service-header">
+      <div class="service-name" data-en="Full Body Massage" data-fr="Massage Corps Entier" data-he="עיסוי גוף מלא">Full Body Massage</div>
+      <div class="service-meta">
+        <span data-en="50 min" data-fr="50 min" data-he="50 דקות">50 min</span>
+        <span class="service-price">180 ₪</span>
+      </div>
+      <div class="service-chevron"></div>
+    </div>
+    <div class="service-body">
+      <div class="service-desc">
+        <p data-en="This comprehensive treatment covers the entire body — from feet to neck — leaving only the head untouched. Over 50 minutes, Liora works through each muscle group with intentional, rhythmic movements that release accumulated tension, ease chronic pain, and rebalance the nervous system. Perfect for those who carry the weight of the week in their body."
+           data-fr="Ce soin complet couvre l'ensemble du corps — des pieds au cou — en laissant uniquement la tête de côté. En 50 minutes, Liora travaille chaque groupe musculaire avec des mouvements intentionnels et rythmiques qui libèrent les tensions accumulées, apaisent les douleurs chroniques et rééquilibrent le système nerveux. Parfait pour ceux qui portent le poids de la semaine dans leur corps."
+           data-he="טיפול מקיף זה מכסה את כל הגוף — מהרגליים ועד הצוואר — תוך השארת הראש בלבד. במשך 50 דקות, ליאורה עובדת על כל קבוצת שרירים עם תנועות מכוונות וקצביות המשחררות מתח שנצבר, מקלות על כאב כרוני ומאזנות מחדש את מערכת העצבים. מושלם לאלו שנושאים את כובד השבוע בגוף.">
+          This comprehensive treatment covers the entire body — from feet to neck — leaving only the head untouched. Over 50 minutes, Liora works through each muscle group with intentional, rhythmic movements that release accumulated tension, ease chronic pain, and rebalance the nervous system. Perfect for those who carry the weight of the week in their body.
+        </p>
+        <p data-en="A seamless blend of Swedish effleurage and deep Californian holding techniques ensures every part of you is addressed with care. This session is ideal for regular self-care, recovery after physical effort, or simply the pleasure of complete body relaxation."
+           data-fr="Un mélange harmonieux d'effleurage suédois et de techniques d'enveloppement californiennes profondes garantit que chaque partie de votre corps est prise en charge avec soin. Cette séance est idéale pour l'entretien régulier, la récupération après un effort physique, ou simplement le plaisir d'une détente corporelle totale."
+           data-he="שילוב חלק של אפלורז' שוודי וטכניקות אחיזה קליפורניות עמוקות מבטיח שכל חלק בגופך מטופל בקפידה. הפגישה אידיאלית לטיפול עצמי קבוע, התאוששות לאחר מאמץ פיזי, או פשוט עונג של רפיון גוף מלא.">
+          A seamless blend of Swedish effleurage and deep Californian holding techniques ensures every part of you is addressed with care. This session is ideal for regular self-care, recovery after physical effort, or simply the pleasure of complete body relaxation.
+        </p>
+        <div class="service-benefits">
+          <span class="benefit-tag" data-en="Full body" data-fr="Corps entier" data-he="גוף מלא">Full body</span>
+          <span class="benefit-tag" data-en="Deep relaxation" data-fr="Relaxation profonde" data-he="הרפיה עמוקה">Deep relaxation</span>
+          <span class="benefit-tag" data-en="Pain relief" data-fr="Soulagement douleurs" data-he="הקלת כאב">Pain relief</span>
+          <span class="benefit-tag" data-en="Nervous system reset" data-fr="Rééquilibrage nerveux" data-he="איפוס מערכת עצבים">Nervous system reset</span>
+        </div>
+        <a href="https://wa.me/972586874252?text=Bonjour%20Liora%20%F0%9F%8C%BF%20Je%20souhaite%20r%C3%A9server%20un%20Massage%20Corps%20Entier%20(50%20min%20%E2%80%93%20180%E2%82%AA).%20Quelles%20sont%20vos%20disponibilit%C3%A9s%20%3F" target="_blank" class="btn-book-service" onclick="event.stopPropagation()">
+          <span data-en="BOOK NOW" data-fr="RÉSERVER" data-he="הזמן עכשיו">BOOK NOW</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- RITUAL COMPLET -->
+  <div class="service-item" onclick="toggleService(this)">
+    <div class="service-header">
+      <div class="service-name" data-en="Complete Ritual" data-fr="Rituel Complet" data-he="טקס מלא">Complete Ritual</div>
+      <div class="service-meta">
+        <span data-en="70 min" data-fr="70 min" data-he="70 דקות">70 min</span>
+        <span class="service-price">250 ₪</span>
+      </div>
+      <div class="service-chevron"></div>
+    </div>
+    <div class="service-body">
+      <div class="service-desc">
+        <p data-en="The crown jewel of our classic offerings. The Complete Ritual is a full 70-minute immersion that attends to every part of you — body, face, scalp, and hair. This is not simply a massage; it is a ceremony of self-care. Beginning with the feet and traveling the entire length of the body, Liora then transitions to a gentle yet invigorating facial massage, followed by a scalp treatment using warm aromatic oils."
+           data-fr="Le joyau de couronne de nos soins classiques. Le Rituel Complet est une immersion de 70 minutes qui prend soin de chaque partie de vous — corps, visage, cuir chevelu et cheveux. Il ne s'agit pas simplement d'un massage ; c'est une cérémonie de soin de soi. Commençant par les pieds et parcourant toute la longueur du corps, Liora passe ensuite à un doux massage facial revitalisant, suivi d'un soin du cuir chevelu avec des huiles aromatiques chaudes."
+           data-he="הכתר של ההצעות הקלאסיות שלנו. הטקס המלא הוא שקיעה של 70 דקות שמטפלת בכל חלק בך — גוף, פנים, קרקפת ושיער. זהו לא רק עיסוי; זוהי טקס של טיפול עצמי. מתחיל ברגליים ועובר לאורך כל הגוף, ליאורה עוברת לעיסוי פנים עדין אך מרענן, ולאחר מכן טיפול בקרקפת עם שמנים ארומטיים חמים.">
+          The crown jewel of our classic offerings. The Complete Ritual is a full 70-minute immersion that attends to every part of you — body, face, scalp, and hair. This is not simply a massage; it is a ceremony of self-care. Beginning with the feet and traveling the entire length of the body, Liora then transitions to a gentle yet invigorating facial massage, followed by a scalp treatment using warm aromatic oils.
+        </p>
+        <p data-en="The facial massage promotes lymphatic drainage, reduces puffiness, and leaves the skin luminous. The scalp treatment nourishes hair roots and releases tension held in the cranium — an often-forgotten source of chronic headaches and fatigue. You will leave feeling as if your entire being has been reset."
+           data-fr="Le massage facial favorise le drainage lymphatique, réduit les gonflements et laisse la peau lumineuse. Le soin du cuir chevelu nourrit les racines des cheveux et libère les tensions dans le crâne — une source souvent oubliée de maux de tête chroniques et de fatigue. Vous repartirez avec la sensation que votre être entier a été réinitialisé."
+           data-he="עיסוי הפנים מקדם ניקוז לימפתי, מפחית נפיחות ומשאיר את העור זוהר. טיפול הקרקפת מזין את שורשי השיער ומשחרר מתח המוחזק בגולגולת — מקור שנשכח לעיתים קרובות של כאבי ראש כרוניים ועייפות. תצאו בתחושה שכל הישות שלכם אופסה מחדש.">
+          The facial massage promotes lymphatic drainage, reduces puffiness, and leaves the skin luminous. The scalp treatment nourishes hair roots and releases tension held in the cranium — an often-forgotten source of chronic headaches and fatigue. You will leave feeling as if your entire being has been reset.
+        </p>
+        <div class="service-benefits">
+          <span class="benefit-tag" data-en="Full body + face" data-fr="Corps + visage" data-he="גוף + פנים">Full body + face</span>
+          <span class="benefit-tag" data-en="Scalp & hair care" data-fr="Cuir chevelu" data-he="טיפול קרקפת">Scalp & hair care</span>
+          <span class="benefit-tag" data-en="Luminous skin" data-fr="Peau lumineuse" data-he="עור זוהר">Luminous skin</span>
+          <span class="benefit-tag" data-en="Complete renewal" data-fr="Renouveau total" data-he="התחדשות מלאה">Complete renewal</span>
+        </div>
+        <a href="https://wa.me/972586874252?text=Bonjour%20Liora%20%F0%9F%8C%BF%20Je%20souhaite%20r%C3%A9server%20le%20Rituel%20Complet%20(70%20min%20%E2%80%93%20250%E2%82%AA)%20avec%20massage%20du%20corps%2C%20du%20visage%20et%20du%20cuir%20chevelu.%20Quelles%20sont%20vos%20disponibilit%C3%A9s%20%3F" target="_blank" class="btn-book-service" onclick="event.stopPropagation()">
+          <span data-en="BOOK NOW" data-fr="RÉSERVER" data-he="הזמן עכשיו">BOOK NOW</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SPECIAL MASSAGES -->
+<div class="service-category">
+  <div class="service-category-title"
+       data-en="✦ Signature Treatments" data-fr="✦ Soins Signature" data-he="✦ טיפולים ייחודיים">
+    ✦ Signature Treatments
+  </div>
+
+  <!-- THAI MASSAGE -->
+  <div class="service-item" onclick="toggleService(this)">
+    <div class="service-header">
+      <div class="service-name" data-en="Thai Massage" data-fr="Massage Thaï" data-he="עיסוי תאילנדי">Thai Massage</div>
+      <div class="service-meta">
+        <span data-en="50 min" data-fr="50 min" data-he="50 דקות">50 min</span>
+        <span class="service-price">300 ₪</span>
+      </div>
+      <div class="service-chevron"></div>
+    </div>
+    <div class="service-body">
+      <div class="service-desc">
+        <p data-en="Rooted in over 2,500 years of healing tradition, Thai Massage is a meditative, floor-based practice that merges acupressure, assisted yoga stretching, and energy line work. Performed fully clothed on a comfortable floor mat, this treatment uses Liora's hands, forearms, elbows, and body weight to apply rhythmic, targeted pressure along the body's energy meridians."
+           data-fr="Enraciné dans plus de 2 500 ans de tradition curative, le Massage Thaï est une pratique méditative au sol qui fusionne l'acupression, les étirements de yoga assistés et le travail sur les lignes énergétiques. Réalisé habillé sur un tapis confortable, ce soin utilise les mains, avant-bras, coudes et le poids du corps de Liora pour appliquer des pressions rythmiques et ciblées le long des méridiens énergétiques du corps."
+           data-he="מושרש ביותר מ-2,500 שנות מסורת ריפוי, עיסוי תאילנדי הוא תרגול מדיטטיבי, מבוסס-רצפה המשלב לחיצות, מתיחות יוגה בסיוע ועבודה על קווי אנרגיה. מבוצע לבוש על מזרן רצפה נוח, הטיפול משתמש בידיים, אמות ידיים, מרפקים ומשקל הגוף של ליאורה להפעלת לחץ קצבי וממוקד לאורך נתיבי האנרגיה של הגוף.">
+          Rooted in over 2,500 years of healing tradition, Thai Massage is a meditative, floor-based practice that merges acupressure, assisted yoga stretching, and energy line work. Performed fully clothed on a comfortable floor mat, this treatment uses Liora's hands, forearms, elbows, and body weight to apply rhythmic, targeted pressure along the body's energy meridians.
+        </p>
+        <p data-en="Unlike table massages, Thai Massage is interactive: Liora will guide your body through a flowing sequence of passive stretches and compressions, improving flexibility, joint mobility, and the free flow of vital energy (prana). Clients often describe the experience as 'being folded into peace'. Particularly recommended for those who feel stiff, blocked, or mentally overwhelmed."
+           data-fr="Contrairement aux massages sur table, le Massage Thaï est interactif : Liora guidera votre corps à travers une séquence fluide d'étirements passifs et de compressions, améliorant la flexibilité, la mobilité articulaire et le libre flux de l'énergie vitale (prana). Les clients décrivent souvent l'expérience comme « être replié dans la paix ». Particulièrement recommandé pour ceux qui se sentent rigides, bloqués ou mentalement débordés."
+           data-he="בניגוד לעיסויים על שולחן, עיסוי תאילנדי הוא אינטראקטיבי: ליאורה תנחה את גופך דרך רצף זורם של מתיחות פסיביות ולחיצות, משפרת גמישות, ניידות מפרקים וזרימה חופשית של אנרגיה חיונית (פראנה). לקוחות מתארים לרוב את החוויה כ'להיות מקופל לתוך שלווה'. מומלץ במיוחד לאלו שמרגישים נוקשים, חסומים או עמוסים נפשית.">
+          Unlike table massages, Thai Massage is interactive: Liora will guide your body through a flowing sequence of passive stretches and compressions, improving flexibility, joint mobility, and the free flow of vital energy (prana). Clients often describe the experience as "being folded into peace". Particularly recommended for those who feel stiff, blocked, or mentally overwhelmed.
+        </p>
+        <div class="service-benefits">
+          <span class="benefit-tag" data-en="Energy flow" data-fr="Flux énergétique" data-he="זרימת אנרגיה">Energy flow</span>
+          <span class="benefit-tag" data-en="Deep flexibility" data-fr="Flexibilité profonde" data-he="גמישות עמוקה">Deep flexibility</span>
+          <span class="benefit-tag" data-en="Joint mobility" data-fr="Mobilité articulaire" data-he="ניידות מפרקים">Joint mobility</span>
+          <span class="benefit-tag" data-en="Acupressure" data-fr="Acupression" data-he="לחיצות">Acupressure</span>
+        </div>
+        <a href="https://wa.me/972586874252?text=Bonjour%20Liora%20%F0%9F%8C%BF%20Je%20souhaite%20r%C3%A9server%20un%20Massage%20Tha%C3%AF%20(50%20min%20%E2%80%93%20300%E2%82%AA).%20Quelles%20sont%20vos%20disponibilit%C3%A9s%20%3F" target="_blank" class="btn-book-service" onclick="event.stopPropagation()">
+          <span data-en="BOOK NOW" data-fr="RÉSERVER" data-he="הזמן עכשיו">BOOK NOW</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOT STONE -->
+  <div class="service-item" onclick="toggleService(this)">
+    <div class="service-header">
+      <div class="service-name" data-en="Hot Stone Massage" data-fr="Massage aux Pierres Chaudes" data-he="עיסוי באבנים חמות">Hot Stone Massage</div>
+      <div class="service-meta">
+        <span data-en="60 min" data-fr="60 min" data-he="60 דקות">60 min</span>
+        <span class="service-price">300 ₪</span>
+      </div>
+      <div class="service-chevron"></div>
+    </div>
+    <div class="service-body">
+      <div class="service-desc">
+        <p data-en="The Hot Stone Massage is a deeply therapeutic ritual that harnesses the ancient healing power of volcanic basalt stones, heated to the perfect temperature. The warmth penetrates far deeper than hands alone could reach — relaxing muscle fibers at their core, dissolving knots that have resisted ordinary massage, and opening energy channels throughout the body."
+           data-fr="Le Massage aux Pierres Chaudes est un rituel profondément thérapeutique qui exploite le pouvoir curatif ancestral des pierres de basalte volcanique, chauffées à la température parfaite. La chaleur pénètre bien plus profondément que les mains seules ne pourraient l'atteindre — relaxant les fibres musculaires à leur cœur, dissolvant les nœuds qui ont résisté aux massages ordinaires, et ouvrant les canaux énergétiques dans tout le corps."
+           data-he="עיסוי האבנים החמות הוא טקס טיפולי עמוק המרתם את כוח הריפוי העתיק של אבני בזלת וולקניות, מחוממות לטמפרטורה המושלמת. החום חודר הרבה יותר עמוק ממה שהידיים לבדן יכולות להגיע — מרפה סיבי שרירים בליבם, ממיס קשרים שעמדו בפני עיסוי רגיל, ופותח ערוצי אנרגיה בכל הגוף.">
+          The Hot Stone Massage is a deeply therapeutic ritual that harnesses the ancient healing power of volcanic basalt stones, heated to the perfect temperature. The warmth penetrates far deeper than hands alone could reach — relaxing muscle fibers at their core, dissolving knots that have resisted ordinary massage, and opening energy channels throughout the body.
+        </p>
+        <p data-en="Smooth stones are placed along the spine, in the palms, and between the toes — key energetic points — while Liora glides heated stones along the muscles with gentle, intentional strokes. The sensation is one of profound warmth, surrender, and timelessness. This treatment is especially beneficial for chronic tension, poor circulation, anxiety, and insomnia. An experience you will carry in your body long after you leave."
+           data-fr="Des pierres lisses sont placées le long de la colonne vertébrale, dans les paumes et entre les orteils — des points énergétiques clés — tandis que Liora fait glisser des pierres chauffées le long des muscles avec des mouvements doux et intentionnels. La sensation est celle d'une chaleur profonde, d'un abandon et d'une intemporalité. Ce soin est particulièrement bénéfique pour les tensions chroniques, la mauvaise circulation, l'anxiété et l'insomnie. Une expérience que vous porterez dans votre corps longtemps après l'avoir quittée."
+           data-he="אבנים חלקות ממוקמות לאורך עמוד השדרה, בכפות הידיים ובין בהונות הרגליים — נקודות אנרגיה מרכזיות — בעוד ליאורה מחליקה אבנים מחוממות לאורך השרירים עם תנועות עדינות ומכוונות. התחושה היא של חום עמוק, כניעה ואי-זמניות. טיפול זה מועיל במיוחד למתח כרוני, זרימת דם לקויה, חרדה ונדודי שינה. חוויה שתישאו בגופכם זמן רב לאחר שתצאו.">
+          Smooth stones are placed along the spine, in the palms, and between the toes — key energetic points — while Liora glides heated stones along the muscles with gentle, intentional strokes. The sensation is one of profound warmth, surrender, and timelessness. This treatment is especially beneficial for chronic tension, poor circulation, anxiety, and insomnia. An experience you will carry in your body long after you leave.
+        </p>
+        <div class="service-benefits">
+          <span class="benefit-tag" data-en="Deep heat therapy" data-fr="Thermothérapie" data-he="טיפול חום עמוק">Deep heat therapy</span>
+          <span class="benefit-tag" data-en="Chronic tension" data-fr="Tensions chroniques" data-he="מתח כרוני">Chronic tension</span>
+          <span class="benefit-tag" data-en="Anxiety relief" data-fr="Anti-anxiété" data-he="הפגת חרדה">Anxiety relief</span>
+          <span class="benefit-tag" data-en="Better sleep" data-fr="Meilleur sommeil" data-he="שינה טובה יותר">Better sleep</span>
+        </div>
+        <a href="https://wa.me/972586874252?text=Bonjour%20Liora%20%F0%9F%8C%BF%20Je%20souhaite%20r%C3%A9server%20un%20Massage%20aux%20Pierres%20Chaudes%20(60%20min%20%E2%80%93%20300%E2%82%AA).%20Quelles%20sont%20vos%20disponibilit%C3%A9s%20%3F" target="_blank" class="btn-book-service" onclick="event.stopPropagation()">
+          <span data-en="BOOK NOW" data-fr="RÉSERVER" data-he="הזמן עכשיו">BOOK NOW</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ── IMAGE BANNER before Reviews ── -->
+
+<div class="section-image-banner">
+  <img src="massage-table.jpg" alt="Zen Therapy massage room atmosphere">
+</div>
+
+<!-- ── REVIEWS ── -->
+
+<section class="reviews-section" id="reviews">
+  <p class="section-eyebrow" data-en="Client Stories" data-fr="Témoignages" data-he="חוויות לקוחות">Client Stories</p>
+  <h2 class="section-title" data-en="Words of Trust" data-fr="Mots de Confiance" data-he="מילות אמון">Words of Trust</h2>
+  <div class="section-divider"><div class="divider-diamond"></div></div>
+
+  <div class="reviews-grid">
+
+```
+<div class="review-card">
+  <div class="stars">★★★★★</div>
+  <p class="review-text"
+     data-en="Liora has magic hands. I came in with severe back tension and left feeling like I was floating. The space is so warm, beautiful and deeply soothing — every detail thought through. I'll be back every month."
+     data-fr="Liora a des mains magiques. Je suis arrivée avec de fortes tensions dans le dos et je suis repartie en flottant. L'espace est si chaleureux, beau et profondément apaisant — chaque détail est pensé. Je reviendrai chaque mois."
+     data-he="לליאורה יש ידיים קסומות. הגעתי עם מתחים עזים בגב ויצאתי מרגישה שאני מרחפת. המקום כל כך חמים, יפה ומרגיע עמוקות — כל פרט מחושב. אחזור כל חודש.">
+    Liora has magic hands. I came in with severe back tension and left feeling like I was floating. The space is so warm, beautiful and deeply soothing — every detail thought through. I'll be back every month.
+  </p>
+  <div class="reviewer-name">Noa B.</div>
+</div>
+
+<div class="review-card">
+  <div class="stars">★★★★★</div>
+  <p class="review-text"
+     data-en="The hot stone massage was unlike anything I've ever experienced. The warmth went so deep — I fell asleep halfway through and woke up completely renewed. Zen Therapy is a hidden gem."
+     data-fr="Le massage aux pierres chaudes était une expérience unique en son genre. La chaleur est allée si profondément — je me suis endormie à mi-chemin et me suis réveillée complètement régénérée. Zen Therapy est un joyau caché."
+     data-he="עיסוי האבנים החמות היה חוויה שלא חוויתי כמוה. החום חדר כל כך עמוק — נרדמתי באמצע והתעוררתי מחודשת לחלוטין. זן תרפי הוא מקום מוסתר שכדאי לגלות.">
+    The hot stone massage was unlike anything I've ever experienced. The warmth went so deep — I fell asleep halfway through and woke up completely renewed. Zen Therapy is a hidden gem.
+  </p>
+  <div class="reviewer-name">Maya R.</div>
+</div>
+
+<div class="review-card">
+  <div class="stars">★★★★★</div>
+  <p class="review-text"
+     data-en="I tried the Complete Ritual and it was transformative. The scalp massage alone was worth everything. Liora is incredibly attentive and intuitive — she knew exactly where I needed care. Absolutely divine."
+     data-fr="J'ai essayé le Rituel Complet et c'était transformateur. Le massage du cuir chevelu à lui seul valait tout. Liora est incroyablement attentive et intuitive — elle savait exactement où j'avais besoin de soins. Absolument divin."
+     data-he="ניסיתי את הטקס המלא והיה זה מהפך. עיסוי הקרקפת לבדו היה שווה הכל. ליאורה מדהים בקשובה ואינטואיטיבית — היא ידעה בדיוק היכן אני צריכה טיפול. אלוהי לחלוטין.">
+    I tried the Complete Ritual and it was transformative. The scalp massage alone was worth everything. Liora is incredibly attentive and intuitive — she knew exactly where I needed care. Absolutely divine.
+  </p>
+  <div class="reviewer-name">Sara K.</div>
+</div>
+```
+
+  </div>
+
+  <!-- REVIEW FORM -->
+
+  <div class="review-form-wrap">
+    <div class="form-title" data-en="Share Your Experience" data-fr="Partagez Votre Expérience" data-he="שתפו את החוויה שלכם">Share Your Experience</div>
+
+```
+<div class="star-rating" id="starRating">
+  <input type="radio" id="s5" name="rating" value="5"><label for="s5">★</label>
+  <input type="radio" id="s4" name="rating" value="4"><label for="s4">★</label>
+  <input type="radio" id="s3" name="rating" value="3"><label for="s3">★</label>
+  <input type="radio" id="s2" name="rating" value="2"><label for="s2">★</label>
+  <input type="radio" id="s1" name="rating" value="1"><label for="s1">★</label>
+</div>
+
+<div class="form-field">
+  <input type="text" id="reviewName" placeholder="Your name" maxlength="60"
+         data-placeholder-en="Your name"
+         data-placeholder-fr="Votre prénom"
+         data-placeholder-he="שמך">
+</div>
+<div class="form-field">
+  <textarea id="reviewText" rows="4" placeholder="Your experience…" maxlength="500"
+            data-placeholder-en="Your experience…"
+            data-placeholder-fr="Votre expérience…"
+            data-placeholder-he="החוויה שלך…"></textarea>
+</div>
+
+<button class="btn-submit" onclick="submitReview()">
+  <span data-en="SUBMIT REVIEW" data-fr="ENVOYER" data-he="שלח ביקורת">SUBMIT REVIEW</span>
+</button>
+<div class="form-success" id="formSuccess"
+     data-en="Thank you for sharing your experience. ✦"
+     data-fr="Merci de partager votre expérience. ✦"
+     data-he="תודה על שיתוף החוויה שלך. ✦">
+  Thank you for sharing your experience. ✦
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- ── FOOTER ── -->
+
+<footer>
+  <div class="footer-brand">ZEN THERAPY</div>
+  <div class="footer-details">
+    <div data-en="Liora · Certified Massage Therapist" data-fr="Liora · Masseuse Certifiée" data-he="ליאורה · מטפלת עיסוי מוסמכת">Liora · Certified Massage Therapist</div>
+    <div data-en="Harish, Israel" data-fr="Harish, Israël" data-he="חריש, ישראל">Harish, Israel</div>
+    <div><a href="https://instagram.com/zen_therapy_liora" target="_blank">@zen_therapy_liora</a></div>
+  </div>
+  <div class="footer-copy">© 2025 Zen Therapy · All rights reserved</div>
+</footer>
+
+<script>
+  // ── LANGUAGE ──
+  const translations = {
+    en: { dir: 'ltr' },
+    fr: { dir: 'ltr' },
+    he: { dir: 'rtl' }
+  };
+
+  let currentLang = 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+    document.body.className = 'lang-' + lang;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = translations[lang].dir;
+
+    // Update all data-LANG elements
+    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+      el.textContent = el.getAttribute('data-' + lang);
+    });
+
+    // Update placeholders
+    document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
+      el.placeholder = el.getAttribute('data-placeholder-' + lang);
+    });
+
+    // Update form success
+    const fs = document.getElementById('formSuccess');
+    if (fs) fs.textContent = fs.getAttribute('data-' + lang);
+
+    // Active button
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(b => {
+      if (b.textContent.trim() === lang.toUpperCase() ||
+          (lang === 'he' && b.textContent.trim() === 'עב')) {
+        b.classList.add('active');
+      }
+    });
+  }
+
+  // ── ACCORDION ──
+  function toggleService(item) {
+    const isOpen = item.classList.contains('open');
+    // close all
+    document.querySelectorAll('.service-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // ── REVIEW SUBMIT → WhatsApp ──
+  function submitReview() {
+    const name = document.getElementById('reviewName').value.trim();
+    const text = document.getElementById('reviewText').value.trim();
+    const ratingEl = document.querySelector('#starRating input:checked');
+
+    if (!name || !text || !ratingEl) return;
+
+    const stars = '★'.repeat(parseInt(ratingEl.value)) + '☆'.repeat(5 - parseInt(ratingEl.value));
+    const message = encodeURIComponent(
+      '🌿 Nouvel avis Zen Therapy\n\n' +
+      '👤 ' + name + '\n' +
+      '⭐ ' + stars + '\n\n' +
+      '💬 ' + text
+    );
+
+    window.open('https://wa.me/972586874252?text=' + message, '_blank');
+
+    const msgs = {
+      en: 'Thank you for sharing your experience. ✦',
+      fr: 'Merci de partager votre expérience. ✦',
+      he: 'תודה על שיתוף החוויה שלך. ✦'
+    };
+
+    const fs = document.getElementById('formSuccess');
+    fs.textContent = msgs[currentLang];
+    fs.style.display = 'block';
+
+    document.getElementById('reviewName').value = '';
+    document.getElementById('reviewText').value = '';
+    ratingEl.checked = false;
+
+    setTimeout(() => { fs.style.display = 'none'; }, 5000);
+  }
+
+  // Init
+  setLang('en');
+</script>
+
+</body>
+</html>
