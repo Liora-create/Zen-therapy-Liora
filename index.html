@@ -282,6 +282,23 @@
 
   .therapist-insta a:hover { color: var(--gold); }
 
+  /* ── SECTION IMAGE BANNER ── */
+  .section-image-banner {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .section-image-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.75) saturate(0.85);
+    display: block;
+  }
+
   /* ── SERVICES ── */
   .services-section { background: var(--dark); }
 
@@ -369,7 +386,7 @@
     transition: max-height 0.55s cubic-bezier(0.4,0,0.2,1);
   }
 
-  .service-item.open .service-body { max-height: 600px; }
+  .service-item.open .service-body { max-height: 800px; }
 
   .service-desc {
     padding: 0 28px 28px;
@@ -392,6 +409,7 @@
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 16px;
+    margin-bottom: 24px;
   }
 
   .benefit-tag {
@@ -402,6 +420,39 @@
     border: 1px solid rgba(154,122,69,0.35);
     padding: 4px 12px;
   }
+
+  /* ── BOOK NOW (inside services) ── */
+  .btn-book-service {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 13px 36px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.4s;
+    margin-top: 8px;
+  }
+
+  .btn-book-service::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  .btn-book-service:hover::before { transform: scaleX(1); }
+  .btn-book-service:hover { color: var(--dark); }
+  .btn-book-service span { position: relative; z-index: 1; }
 
   /* ── REVIEWS ── */
   .reviews-section { background: var(--dark-2); }
@@ -622,6 +673,7 @@
     .service-header { padding: 18px 18px; }
     .service-meta { flex-direction: column; gap: 4px; align-items: flex-end; }
     .service-desc { padding: 0 18px 22px; padding-top: 16px; }
+    .section-image-banner { height: 260px; }
   }
 </style>
 </head>
@@ -652,7 +704,7 @@
        data-he="שם שבו השקט פוגש את המגע, והגוף נזכר במה שפירושו לנוח.">
       Where silence meets touch, and the body remembers what it means to rest.
     </p>
-    <a href="#services" class="btn-book">
+    <a href="https://wa.me/972586874252?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20chez%20Zen%20Therapy%20%F0%9F%8C%BF" target="_blank" class="btn-book">
       <span data-en="BOOK NOW" data-fr="RÉSERVER" data-he="הזמן עכשיו">BOOK NOW</span>
     </a>
   </div>
@@ -678,6 +730,11 @@
     </div>
   </div>
 </section>
+
+<!-- ── IMAGE BANNER before Services ── -->
+<div class="section-image-banner">
+  <img src="massage-pierre.jpg" alt="Hot stone massage at Zen Therapy">
+</div>
 
 <!-- ── SERVICES ── -->
 <section class="services-section" id="services">
@@ -722,6 +779,9 @@
               <span class="benefit-tag" data-en="Stress relief" data-fr="Anti-stress" data-he="הפגת לחץ">Stress relief</span>
               <span class="benefit-tag" data-en="Circulation boost" data-fr="Circulation" data-he="שיפור מחזור הדם">Circulation boost</span>
             </div>
+            <a href="https://wa.me/972586874252?text=Bonjour%20Liora%20%F0%9F%8C%BF%20Je%20souhaite%20r%C3%A9server%20un%20Demi-Massage%20(30%20min%20%E2%80%93%20100%E2%82%AA).%20Quelles%20sont%20vos%20disponibilit%C3%A9s%20%3F" target="_blank" class="btn-book-service" onclick="event.stopPropagation()">
+              <span data-en="BOOK NOW" data-fr="RÉSERVER" data-he="הזמן עכשיו">BOOK NOW</span>
+            </a>
           </div>
         </div>
       </div>
@@ -754,6 +814,9 @@
               <span class="benefit-tag" data-en="Pain relief" data-fr="Soulagement douleurs" data-he="הקלת כאב">Pain relief</span>
               <span class="benefit-tag" data-en="Nervous system reset" data-fr="Rééquilibrage nerveux" data-he="איפוס מערכת עצבים">Nervous system reset</span>
             </div>
+            <a href="https://wa.me/972586874252?text=Bonjour%20Liora%20%F0%9F%8C%BF%20Je%20souhaite%20r%C3%A9server%20un%20Massage%20Corps%20Entier%20(50%20min%20%E2%80%93%20180%E2%82%AA).%20Quelles%20sont%20vos%20disponibilit%C3%A9s%20%3F" target="_blank" class="btn-book-service" onclick="event.stopPropagation()">
+              <span data-en="BOOK NOW" data-fr="RÉSERVER" data-he="הזמן עכשיו">BOOK NOW</span>
+            </a>
           </div>
         </div>
       </div>
@@ -786,6 +849,9 @@
               <span class="benefit-tag" data-en="Luminous skin" data-fr="Peau lumineuse" data-he="עור זוהר">Luminous skin</span>
               <span class="benefit-tag" data-en="Complete renewal" data-fr="Renouveau total" data-he="התחדשות מלאה">Complete renewal</span>
             </div>
+            <a href="https://wa.me/972586874252?text=Bonjour%20Liora%20%F0%9F%8C%BF%20Je%20souhaite%20r%C3%A9server%20le%20Rituel%20Complet%20(70%20min%20%E2%80%93%20250%E2%82%AA)%20avec%20massage%20du%20corps%2C%20du%20visage%20et%20du%20cuir%20chevelu.%20Quelles%20sont%20vos%20disponibilit%C3%A9s%20%3F" target="_blank" class="btn-book-service" onclick="event.stopPropagation()">
+              <span data-en="BOOK NOW" data-fr="RÉSERVER" data-he="הזמן עכשיו">BOOK NOW</span>
+            </a>
           </div>
         </div>
       </div>
@@ -826,6 +892,9 @@
               <span class="benefit-tag" data-en="Joint mobility" data-fr="Mobilité articulaire" data-he="ניידות מפרקים">Joint mobility</span>
               <span class="benefit-tag" data-en="Acupressure" data-fr="Acupression" data-he="לחיצות">Acupressure</span>
             </div>
+            <a href="https://wa.me/972586874252?text=Bonjour%20Liora%20%F0%9F%8C%BF%20Je%20souhaite%20r%C3%A9server%20un%20Massage%20Tha%C3%AF%20(50%20min%20%E2%80%93%20300%E2%82%AA).%20Quelles%20sont%20vos%20disponibilit%C3%A9s%20%3F" target="_blank" class="btn-book-service" onclick="event.stopPropagation()">
+              <span data-en="BOOK NOW" data-fr="RÉSERVER" data-he="הזמן עכשיו">BOOK NOW</span>
+            </a>
           </div>
         </div>
       </div>
@@ -858,6 +927,9 @@
               <span class="benefit-tag" data-en="Anxiety relief" data-fr="Anti-anxiété" data-he="הפגת חרדה">Anxiety relief</span>
               <span class="benefit-tag" data-en="Better sleep" data-fr="Meilleur sommeil" data-he="שינה טובה יותר">Better sleep</span>
             </div>
+            <a href="https://wa.me/972586874252?text=Bonjour%20Liora%20%F0%9F%8C%BF%20Je%20souhaite%20r%C3%A9server%20un%20Massage%20aux%20Pierres%20Chaudes%20(60%20min%20%E2%80%93%20300%E2%82%AA).%20Quelles%20sont%20vos%20disponibilit%C3%A9s%20%3F" target="_blank" class="btn-book-service" onclick="event.stopPropagation()">
+              <span data-en="BOOK NOW" data-fr="RÉSERVER" data-he="הזמן עכשיו">BOOK NOW</span>
+            </a>
           </div>
         </div>
       </div>
@@ -865,6 +937,11 @@
     </div>
   </div>
 </section>
+
+<!-- ── IMAGE BANNER before Reviews ── -->
+<div class="section-image-banner">
+  <img src="massage-table.jpg" alt="Zen Therapy massage room atmosphere">
+</div>
 
 <!-- ── REVIEWS ── -->
 <section class="reviews-section" id="reviews">
@@ -877,10 +954,10 @@
     <div class="review-card">
       <div class="stars">★★★★★</div>
       <p class="review-text"
-         data-en="Liora has magic hands. I came in with severe back tension and left feeling like I was floating. The ambiance is pure luxury — every detail thought through. I'll be back every month."
-         data-fr="Liora a des mains magiques. Je suis arrivée avec de fortes tensions dans le dos et je suis repartie en flottant. L'ambiance est un luxe pur — chaque détail est pensé. Je reviendrai chaque mois."
-         data-he="לליאורה יש ידיים קסומות. הגעתי עם מתחים עזים בגב ויצאתי מרגישה שאני מרחפת. האווירה היא יוקרה טהורה — כל פרט מחושב. אחזור כל חודש.">
-        Liora has magic hands. I came in with severe back tension and left feeling like I was floating. The ambiance is pure luxury — every detail thought through. I'll be back every month.
+         data-en="Liora has magic hands. I came in with severe back tension and left feeling like I was floating. The space is so warm, beautiful and deeply soothing — every detail thought through. I'll be back every month."
+         data-fr="Liora a des mains magiques. Je suis arrivée avec de fortes tensions dans le dos et je suis repartie en flottant. L'espace est si chaleureux, beau et profondément apaisant — chaque détail est pensé. Je reviendrai chaque mois."
+         data-he="לליאורה יש ידיים קסומות. הגעתי עם מתחים עזים בגב ויצאתי מרגישה שאני מרחפת. המקום כל כך חמים, יפה ומרגיע עמוקות — כל פרט מחושב. אחזור כל חודש.">
+        Liora has magic hands. I came in with severe back tension and left feeling like I was floating. The space is so warm, beautiful and deeply soothing — every detail thought through. I'll be back every month.
       </p>
       <div class="reviewer-name">Noa B.</div>
     </div>
@@ -1006,13 +1083,23 @@
     if (!isOpen) item.classList.add('open');
   }
 
-  // ── REVIEW SUBMIT ──
+  // ── REVIEW SUBMIT → WhatsApp ──
   function submitReview() {
     const name = document.getElementById('reviewName').value.trim();
     const text = document.getElementById('reviewText').value.trim();
-    const rating = document.querySelector('#starRating input:checked');
+    const ratingEl = document.querySelector('#starRating input:checked');
 
-    if (!name || !text || !rating) return;
+    if (!name || !text || !ratingEl) return;
+
+    const stars = '★'.repeat(parseInt(ratingEl.value)) + '☆'.repeat(5 - parseInt(ratingEl.value));
+    const message = encodeURIComponent(
+      '🌿 Nouvel avis Zen Therapy\n\n' +
+      '👤 ' + name + '\n' +
+      '⭐ ' + stars + '\n\n' +
+      '💬 ' + text
+    );
+
+    window.open('https://wa.me/972586874252?text=' + message, '_blank');
 
     const msgs = {
       en: 'Thank you for sharing your experience. ✦',
@@ -1026,7 +1113,7 @@
 
     document.getElementById('reviewName').value = '';
     document.getElementById('reviewText').value = '';
-    if (rating) rating.checked = false;
+    ratingEl.checked = false;
 
     setTimeout(() => { fs.style.display = 'none'; }, 5000);
   }
